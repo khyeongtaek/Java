@@ -12,7 +12,10 @@ public class Main {
         Car car3 = new Car(100000);
         car3.printInfo();
 
+        car3.brand.printInfo();
         Car car4 = new Car("Santafe", 150000, new Brand("KIA", "South Korea"));
         car4.printInfo();
+
+
     }
 }
