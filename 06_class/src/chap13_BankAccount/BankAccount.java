@@ -51,8 +51,7 @@ public class BankAccount {
       System.out.println("이체 실패: 잔고보다 많은 금액을 이체할 수 없습니다.");
 
     }
-    long withdrawal = withdrawal(money);
-    bankAccount.deposit(withdrawal);
+    bankAccount.deposit(withdrawal(money));
   }
   
   /**

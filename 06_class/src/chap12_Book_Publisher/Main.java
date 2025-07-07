@@ -7,23 +7,18 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Book book = new Book();
-    book.setTitle("Java");
+    Contact contact = new Contact();
+    contact.setFax("faxnumber");
+    contact.setTel("telnumber");
 
     Publisher publisher = new Publisher();
     publisher.setName("Korea");
     publisher.setLocation("Seoul");
-
-    Contact contact = new Contact();
-    contact.setFax("faxnumber");
-    contact.setTel("telnumber");
     publisher.setContact(contact);
+
+    Book book = new Book();
+    book.setTitle("Java");
     book.setPublisher(publisher);
-
-
-    Publisher publisher1 = book.getPublisher();
-    publisher1.getContact();
-
 
     System.out.println("Book Title: " + book.getTitle());
     System.out.println("Publisher Name: " + book.getPublisher().getName());

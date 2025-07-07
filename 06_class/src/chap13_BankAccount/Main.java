@@ -9,7 +9,7 @@ public class Main {
     
     momAcc.transfer(myAcc, -100_000);  //----- 마이너스 이체는 실패해야 합니다. (확인 후 주석 처리)
     momAcc.transfer(myAcc, 10_000_000);  //--- 천만원 이체는 실패해야 합니다. (확인 후 주석 처리)
-    momAcc.transfer(myAcc, 100_000);  //------ 백만원 이체는 성공해야 합니다.
+    momAcc.transfer(myAcc, 0);  //------ 백만원 이체는 성공해야 합니다.
     
     myAcc.inquiry();  //----- 이체결과확인
     momAcc.inquiry();
