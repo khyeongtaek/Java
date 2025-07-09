@@ -15,19 +15,6 @@ public class Ex06 {
     
     char[] uppers = new char[26];
     char[] lowers = new char[26];
-    int i = 0;
-
-    for (char c = 'A'; c <= 'Z'; c++) {
-      uppers[i++] = c;
-    }
-
-    i = 0;
-    for (char c = 'a'; c <= 'z'; c++) {
-      lowers[i++] = c;
-    }
-
-    System.out.println( "uppers = " + new String(uppers) );
-    System.out.println( "lowers = " + new String(lowers) );
     
   }
   

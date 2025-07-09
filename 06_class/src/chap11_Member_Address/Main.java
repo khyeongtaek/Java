@@ -5,12 +5,14 @@ package chap11_Member_Address;
 public class Main {
 
   public static void main(String[] args) {
-    Address home = new Address("Seoul", "Gangnam", "12345");
-    Address delivery = new Address("Busan", "Haeundae", "48000");
 
-    Member member = new Member(home, delivery);
-
+    Member member = new Member(
+        new Address("12345", "주소1", "동호1"), 
+        new Address("67890", "주소2", "동호2")
+    );
+    
     member.printInfo();
+    
   }
 
 }

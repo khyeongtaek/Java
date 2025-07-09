@@ -36,34 +36,6 @@ public class Ex10 {
         {0, 0, 1, 0, 0},
         {0, 0, 1, 0, 0}
     };
-
-    int[][] change = new int[T[0].length][T.length];
-
-    for (int i = 0; i < T.length; i++) {
-      for (int j = 0; j < T[i].length; j++) {
-        change[i][j] = T[j][4-i];
-      }
-    }
-
-    for (int i = 0; i < change.length; i++) {
-      for (int j = 0; j < change[i].length; j++) {
-        T[i][j] = change[j][4-i];
-      }
-    }
-
-    for (int i = 0; i < T.length; i++) {
-      for (int j = 0; j < T[i].length; j++) {
-        change[i][j] = T[j][4-i];
-      }
-    }
-
-    for (int i = 0; i < change.length; i++) {
-      for (int j = 0; j < change[i].length; j++) {
-        System.out.print(change[i][j] + " ");
-      }
-      System.out.println();
-    }
-
     
   }
   

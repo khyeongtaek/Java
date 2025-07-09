@@ -20,16 +20,6 @@ public class Ex09 {
     */
     
     String[][] gugudan = new String[8][9];
-    for (int i = 0; i < gugudan.length; i++) {
-      for (int j = 0; j < gugudan[i].length; j++) {
-        gugudan[i][j] = (i+2) + "x" + (j+1) + "=" + ((i+2)*(j+1));
-      }
-    }
-    for (int i = 0; i < gugudan.length; i++) {
-      for (int j = 0; j < gugudan[i].length; j++) {
-        System.out.println(gugudan[i][j]);
-      }
-    }
     
   }
   

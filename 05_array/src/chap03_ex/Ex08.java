@@ -18,14 +18,6 @@ public class Ex08 {
         {2, 3},
         {3, 3}
     };
-
-    for (int i=0;i<apt.length;i++) {
-      int sum=0;
-      for (int j=0;j<apt[i].length;j++) {
-        sum+=apt[i][j];
-      }
-      System.out.println((i+1)+"층 : "+ sum);
-    }
     
   }
   

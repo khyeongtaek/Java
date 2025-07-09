@@ -6,27 +6,30 @@ package chap12_Book_Publisher;
 public class Main {
 
   public static void main(String[] args) {
-
+    
+    // Contact 객체
     Contact contact = new Contact();
-    contact.setFax("faxnumber");
-    contact.setTel("telnumber");
-
+    contact.setTel("02-1111-1111");
+    contact.setFax("02-1111-1112");
+    
+    // Publisher 객체
     Publisher publisher = new Publisher();
-    publisher.setName("Korea");
-    publisher.setLocation("Seoul");
+    publisher.setName("가산출판사");
+    publisher.setLocation("서울");
     publisher.setContact(contact);
-
+    
+    // Book 객체
     Book book = new Book();
-    book.setTitle("Java");
+    book.setTitle("자바마스터");
     book.setPublisher(publisher);
-
-    System.out.println("Book Title: " + book.getTitle());
-    System.out.println("Publisher Name: " + book.getPublisher().getName());
-    System.out.println("Publisher Location: " + book.getPublisher().getLocation());
-    System.out.println("Publisher Fax: " + book.getPublisher().getContact().getFax());
-    System.out.println("Publisher Tel: " + book.getPublisher().getContact().getTel());
-
-
+    
+    // Getter를 이용한 정보 확인
+    System.out.println(book.getTitle());
+    System.out.println(book.getPublisher().getName());
+    System.out.println(book.getPublisher().getLocation());
+    System.out.println(book.getPublisher().getContact().getTel());
+    System.out.println(book.getPublisher().getContact().getFax());
+    
   }
 
 }

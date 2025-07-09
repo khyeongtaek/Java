@@ -44,15 +44,11 @@ public class Boxer {
    * @param other 상대 복서(Boxer) 객체입니다.
    */
   public void punch(Boxer other) {
-    if(other.getEnergy() > power){
-      other.setEnergy(other.getEnergy() - power);
-    }else {
-      other.setEnergy(0);
+    if (other.energy < power) {
+      other.energy = 0;
+    } else {
+      other.energy -= power;
     }
   }
-
-  @Override
-  public String toString() {
-            return "이름: "+ name + ",   체력: "+ energy;
-  }
+  
 }

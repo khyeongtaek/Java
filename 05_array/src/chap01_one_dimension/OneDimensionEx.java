@@ -25,11 +25,11 @@ public class OneDimensionEx {
     
     //----- 배열 초기화 (배열 선언 + 배열 생성 + 배열 요소에 값 저장) -----//
     
-    // 배열 초기화 1 (배열 선언시에만 초기화가 가능합니다.)
+    // 배열 초기화 1 (정적 초기화, 배열 선언시에만 초기화가 가능합니다.)
     String[] frontEnd = { "HTML", "CSS", "JAVASCRIPT", "REACT" };
     System.out.println(Arrays.toString(frontEnd));
     
-    // 배열 초기화 2 (배열 선언과 초기화를 두 개의 코드로 분리할 수 있습니다.)
+    // 배열 초기화 2 (동적 초기화, 배열 선언과 초기화를 두 개의 코드로 분리할 수 있습니다.)
     String[] backEnd;
     backEnd = new String[] { "MYSQL", "JAVA", "JSP/SERVLET", "SPRING" };
     System.out.println(Arrays.toString(backEnd));

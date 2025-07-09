@@ -1,7 +1,5 @@
 package chap03_ex;
 
-import java.util.Arrays;
-
 public class Ex03 {
 
   public static void main(String[] args) {
@@ -12,18 +10,6 @@ public class Ex03 {
     //      기존 배열의 참조를 새로운 배열의 참조로 바꿉니다.
     
     String[] seasons = {"spring", "summer"};
-    int length = seasons.length;
-
-    String[] newSeasons = new String[length + 2];
-    for (int i = 0; i < length; i++) {
-      newSeasons[i] = seasons[i];
-    }
-
-    newSeasons[length] = "autumn";
-    newSeasons[length + 1] = "winter";
-    seasons = newSeasons;
-    System.out.println( "seasons = " + Arrays.toString(seasons));
-
         
   }
   

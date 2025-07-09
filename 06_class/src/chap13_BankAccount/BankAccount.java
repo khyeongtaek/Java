@@ -13,28 +13,32 @@ public class BankAccount {
   
   /**
    * 입금 메소드입니다. 마이너스 입금은 불가능합니다.
-   * @param money 입금액을 의미합니다.
+   * @param money 입금하려는 금액을 의미합니다.
    */
   public void deposit(long money) {
-    /* 구현 */
-    if(money >= 0){
-      balance += money;
+    if (money < 0) {
+      System.out.println(money + "원 입금 불가");
+      return;
     }
+    balance += money;
   }
   
   /**
-   * 출금 메소드입니다. 마이너스 출금과 잔액보다 큰 금액의 출금은 불가능합니다.
+   * 출금 메소드입니다. 마이너스 출금과 잔고보다 큰 금액의 출금은 불가능합니다.
    * @param money 출금하고자 하는 금액입니다. 실제 출금액과 차이가 있을 수 있습니다.
    * @return 실제 출금액을 의미합니다. 출금이 되었다면 money와 동일하고 아니라면 0입니다.
    */
   public long withdrawal(long money) {
-    /* 구현 */
-    if(money > 0 && money <= balance){
-      balance -= money;
-      return money;
+    if (money < 0) {
+      System.out.println(money + "원 출금 불가");
+      return 0;
     }
-    return 0;
-
+    if (balance < money) {
+      System.out.println("잔고 부족 (현재 잔고: " + balance + "원)");
+      return 0;
+    }
+    balance -= money;
+    return money;
   }
   
   /**
@@ -44,14 +48,7 @@ public class BankAccount {
    * @param money 이체하고자 하는 금액입니다.
    */
   public void transfer(BankAccount bankAccount, long money) {
-    /* 구현 */
-    if(money <= 0){
-      System.out.println("이체 실패: 마이너스 금액을 이체할 수 없습니다.");
-    } else if (money > balance) {
-      System.out.println("이체 실패: 잔고보다 많은 금액을 이체할 수 없습니다.");
-
-    }
-    bankAccount.deposit(withdrawal(money));
+    bankAccount.deposit( withdrawal(money) );
   }
   
   /**
