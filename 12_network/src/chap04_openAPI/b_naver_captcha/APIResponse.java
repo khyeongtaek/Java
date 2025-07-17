@@ -1,12 +1,21 @@
-package chap04_openAPI.b_naver_captcha;
+package chap04_openapi.b_naver_captcha;
 
-public class APIResponse {
-    private boolean result;
-    private String responseTime;
+public class ApiResponse {
 
-    @Override
-    public String toString() {
-        return "검증결과: "+ result+"\n"
-                + "입력시간: " + responseTime+ "\n";
-    }
+  private boolean result;
+  private String responseTime;
+  
+  public boolean isResult() {
+    return result;
+  }
+  public void setResult(boolean result) {
+    this.result = result;
+  }
+  public String getResponseTime() {
+    return responseTime;
+  }
+  public void setResponseTime(String responseTime) {
+    this.responseTime = responseTime;
+  }
+  
 }

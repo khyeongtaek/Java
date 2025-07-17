@@ -143,7 +143,7 @@ public class Main {
      *    3) writeUTF(String s) : UTF-8 인코딩으로 문자열 출력 (한글도 정상 출력 가능)
      */
     
-    File file = new File("/Users/kht/Desktop/test/test.bin");
+    File file = new File("D:/storage/test.bin");
     
     DataOutputStream dos = null;
     

@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.JOptionPane;
+
 public class Cart {
 
   // 필드
-  private List<Map<String, Object>> products;  //----- Product[] 배열 선언 (배열의 생성이 필요합니다.)
-
+  private List<Map<String, Object>> products;
+  
   // 생성자
   public Cart() {
-    // new Cart() 실행 시 products 배열이 생성됩니다.
-    products = new ArrayList<Map<String, Object>>();
+    products = new ArrayList<Map<String,Object>>();
   }
 
   // 메소드
@@ -26,7 +27,7 @@ public class Cart {
   
   public void addProduct(Map<String, Object> product) {
     if (product == null) {
-      System.out.println("전달된 Product이 없습니다.");
+      JOptionPane.showMessageDialog(null, "전달된 Product이 없습니다.");
       return;
     }
     products.add(product);
@@ -35,16 +36,13 @@ public class Cart {
   public Map<String, Object> removeProduct(int idx) {
     int count = products.size();
     if (count == 0) {
-      System.out.println("Cart가 비어있습니다.");
+      JOptionPane.showMessageDialog(null, "Cart가 비어있습니다.");
       return null;
     }
     if (idx < 0 || idx >= count) {
-      System.out.println(idx + "는 없는 인덱스입니다.");
+      JOptionPane.showMessageDialog(null, idx + "는 없는 인덱스입니다.");
       return null;
     }
-
-
-
     return products.remove(idx);
   }
   

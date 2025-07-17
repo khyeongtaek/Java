@@ -59,7 +59,7 @@ public class Store {
    * 
    * @param money 상품 구매를 위해서 고객이 상점에 낸 돈(money)입니다.
    * @param count 구매를 원하는 상품의 개수(count)입니다. 
-   * @return 판매한 상품의 개수와 잔돈을 저장하는 ProductAndChange 타입의 객체입니다.
+   * @return 판매한 상품의 개수와 잔돈을 저장하는 Map 타입의 객체입니다.
    */
   public Map<String, Object> sell(double money, int count) {
     
@@ -79,9 +79,9 @@ public class Store {
     this.money += price * count;
     this.count -= count;
     
-    // 고객(Customer)에게 반환할 ProductAndChange 객체(상품 개수 + 잔돈)
+    // 고객(Customer)에게 반환할 Map 객체(상품 개수 + 잔돈)
     return Map.of("count", count, "change", money - price * count);
-
+    
   }
   
 }

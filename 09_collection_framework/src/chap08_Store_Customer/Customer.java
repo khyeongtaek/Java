@@ -65,9 +65,9 @@ public class Customer {
     
     // 구매확인
     if (productAndChange != null) {
-      this.count += (int)productAndChange.get("count");
+      this.count += (int) productAndChange.get("count");
       this.money -= money;
-      this.money += (double)productAndChange.get("change");
+      this.money += (double) productAndChange.get("change");
     }
     
   }

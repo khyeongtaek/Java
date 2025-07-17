@@ -4,24 +4,22 @@ public class Main {
 
   public static void main(String[] args) {
     
-    //----- 학생을 5명 생성합니다.
+    //----- 직사각형을 1개 생성합니다.
+    Rectangle rectangle = new Rectangle(1.5, 2.5);
     
+    //----- 직사각형의 너비, 높이, 넓이를 출력합니다.
+    System.out.println("너비: " + rectangle.getWidth());
+    System.out.println("높이: " + rectangle.getHeight());
+    System.out.println("넓이: " + rectangle.getArea());
     
-    //----- 교수를 3명 생성합니다.
+    //----- 정사각형을 1개 생성합니다.
+    Square square = new Square(1.5);
     
+    //----- 정사각형의 너비, 높이, 넓이를 출력합니다.
+    System.out.println("너비: " + square.getWidth());
+    System.out.println("높이: " + square.getHeight());
+    System.out.println("넓이: " + square.getArea());
     
-    //----- 대학을 1개 생성합니다.
-    
-    
-    //----- 학생 5명과 교수 3명을 대학에 등록합니다.
-    
-    
-    //----- 학생 1명과 교수 1명을 대학에서 삭제합니다.
-    
-    
-    //----- 대학 정보를 출력해서 정보를 확인합니다.
-    
-
   }
 
 }
