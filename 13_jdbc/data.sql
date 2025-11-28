@@ -9,5 +9,3 @@ INSERT INTO tbl_board(uid, title, content) VALUES
   (3, "나는 상어", "나는 상어입니다.");
   
 COMMIT;
-
-select * from tbl_user t ;
